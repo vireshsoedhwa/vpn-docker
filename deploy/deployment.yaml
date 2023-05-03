@@ -33,6 +33,6 @@ spec:
           - name: HOST_ADDR
             value: "vpn.wieru.com"
           - name: HOST_TUN_PORT
-            value: "443"
+            value: "1194"
           - name: HOST_CONF_PORT
             value: "80"
