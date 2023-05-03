@@ -21,5 +21,3 @@ spec:
           backend:
             service:
               name: vpn-svc
-              port:
-                number: 80

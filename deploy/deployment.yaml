@@ -23,6 +23,8 @@ spec:
           ports:
           - containerPort: 8080
             protocol: TCP
+          - containerPort: 1194
+            protocol: UDP
           resources:
             requests:
               memory: "128Mi"
@@ -30,7 +32,7 @@ spec:
           env:
           - name: HOST_ADDR
             value: "vpn.wieru.com"
-          # - name: HOST_TUN_PORT
-          #   value: "443"
-          # - name: HOST_CONF_PORT
-          #   value: "80"
+          - name: HOST_TUN_PORT
+            value: "443"
+          - name: HOST_CONF_PORT
+            value: "80"
