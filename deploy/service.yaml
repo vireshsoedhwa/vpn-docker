@@ -7,12 +7,7 @@ spec:
   selector:
     app: app
   ports:
-  - name: host-conf-port
-    protocol: TCP
-    port: 80
-    targetPort: 8080
-  - name: host-tun-port
+  - name: wireguard-port
     protocol: UDP
-    port: 1194
-    targetPort: 1194
-  # type: NodePort
+    port: 51820
+    targetPort: 51820
