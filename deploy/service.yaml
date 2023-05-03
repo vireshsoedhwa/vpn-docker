@@ -7,10 +7,10 @@ spec:
   selector:
     app: app
   ports:
-  # - name: host-conf-port
-  #   protocol: TCP
-  #   port: 80
-  #   targetPort: 80
+  - name: host-conf-port
+    protocol: TCP
+    port: 80
+    targetPort: 80
   - name: host-tun-port
     protocol: TCP
     port: 443

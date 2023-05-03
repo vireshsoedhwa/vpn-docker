@@ -19,6 +19,9 @@ spec:
             capabilities:
               add:
                 - NET_ADMIN
+          ports:
+          - containerPort: 80
+            protocol: TCP
           resources:
             requests:
               memory: "128Mi"
