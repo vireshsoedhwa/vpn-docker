@@ -28,7 +28,7 @@ spec:
               cpu: "250m"
           env:
           - name: HOST_ADDR
-            value: "$(curl -s https://api.ipify.org)"
+            value: "vpn.wieru.com"
           - name: HOST_TUN_PORT
             value: "443"
           - name: HOST_CONF_PORT
