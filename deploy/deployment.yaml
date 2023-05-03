@@ -18,9 +18,10 @@ spec:
           securityContext:
             capabilities:
               add:
-                - NET_ADMIN
+              - NET_ADMIN
+              - SYS_ADMIN
           ports:
-          - containerPort: 80
+          - containerPort: 8080
             protocol: TCP
           resources:
             requests:
@@ -29,7 +30,7 @@ spec:
           env:
           - name: HOST_ADDR
             value: "vpn.wieru.com"
-          - name: HOST_TUN_PORT
-            value: "443"
-          - name: HOST_CONF_PORT
-            value: "80"
+          # - name: HOST_TUN_PORT
+          #   value: "443"
+          # - name: HOST_CONF_PORT
+          #   value: "80"

@@ -10,7 +10,7 @@ spec:
   - name: host-conf-port
     protocol: TCP
     port: 80
-    targetPort: 80
+    targetPort: 8080
   # - name: host-tun-port
   #   protocol: TCP
   #   port: 443
