@@ -16,12 +16,7 @@ spec:
         - name: app
           image: lscr.io/linuxserver/wireguard:latest
           securityContext:
-            capabilities:
-              add:
-              - NET_ADMIN
-            sysctls:
-            - name: net.ipv4.conf.all.src_valid_mark
-              value: "1"
+            allowPrivilegeEscalation: true
           ports:
           - containerPort: 51820
             protocol: UDP
