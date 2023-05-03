@@ -24,9 +24,9 @@ spec:
               memory: "128Mi"
               cpu: "250m"
           env:
-          # - name: HOST_ADDR
-          #   value: "$(curl -s https://api.ipify.org)"
+          - name: HOST_ADDR
+            value: "$(curl -s https://api.ipify.org)"
           - name: HOST_TUN_PORT
-            value: 443
+            value: "443"
           - name: HOST_CONF_PORT
-            value: 80
+            value: "80"
