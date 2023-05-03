@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vpn-svc
+  namespace: vpn
+spec:
+  selector:
+    app: app
+  ports:
+  # - name: host-conf-port
+  #   protocol: TCP
+  #   port: 80
+  #   targetPort: 80
+  - name: host-tun-port
+    protocol: UDP
+    port: 443
+    targetPort: 443
+  # type: NodePort

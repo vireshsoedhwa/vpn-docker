@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+  namespace: vpn
+spec:
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+        - name: app
+          image: alekslitvinenk/openvpn
+          securityContext:
+            capabilities:
+              add:
+                - NET_ADMIN
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "250m"
+          env:
+          - name: HOST_ADDR
+            value: "$(curl -s https://api.ipify.org)"
+          - name: HOST_TUN_PORT
+            value: 443
+          - name: HOST_CONF_PORT
+            value: 80
