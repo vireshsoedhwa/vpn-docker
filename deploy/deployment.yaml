@@ -16,6 +16,7 @@ spec:
         - name: app
           image: lscr.io/linuxserver/wireguard:latest
           securityContext:
+            allowPrivilegeEscalation: true
             capabilities:
               add:
                 - NET_ADMIN
