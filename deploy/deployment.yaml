@@ -21,10 +21,6 @@ spec:
               add:
                 - NET_ADMIN
                 - SYS_ADMIN
-            sysctls:
-            - name: net.ipv4.ip_forward
-              value: 1
-
           ports:
           - containerPort: 51820
             protocol: UDP
@@ -53,10 +49,3 @@ spec:
             value: "0.0.0.0/0"            
           - name: LOG_CONFS
             value: "true"
-
----
-
-apiVersion: kubelet.config.k8s.io/v1beta1
-kind: KubeletConfiguration
-allowedUnsafeSysctls:
-  - ["net.ipv4.ip_forward"]
